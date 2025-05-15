@@ -1,0 +1,298 @@
+/* General Page Styling */
+.payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffffff; /* Luxury golden-yellow theme */
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Payment Box */
+.payment-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 420px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.payment-box:hover {
+    transform: translateY(-5px);
+}
+
+.payment-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b8860b; /* Golden color */
+    text-align: center;
+}
+
+.payment-box p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+.payment-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+.payment-form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #b8860b;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fff8e1;
+    transition: all 0.3s ease-in-out;
+}
+
+.payment-form input:focus {
+    border-color: #ffcc00;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+}
+
+/* Card Input */
+.card-input {
+    display: flex;
+    align-items: center;
+    border: 2px solid #b8860b;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff8e1;
+}
+
+.card-input img {
+    width: 35px;
+    margin-right: 12px;
+}
+
+/* Expiry & CVC */
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card-details div {
+    width: 50%;
+}
+
+/* Discount Box */
+.discount-box {
+    display: flex;
+    align-items: center;
+}
+
+.discount-box input {
+    flex: 1;
+    border: 2px solid #b8860b;
+    background: #fff8e1;
+}
+
+.discount-box button {
+    background: #b8860b;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.discount-box button:hover {
+    background: #ffcc00;
+}
+
+.discount-box button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+/* Pay Button */
+.pay-btn {
+    background: #b8860b;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.pay-btn:hover {
+    background: #ffcc00;
+}
+
+/* Summary Box (3D Effect) */
+.summary-box {
+    background: linear-gradient(145deg, #f7e6a1, #b8860b);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    color: white;
+    transform: perspective(600px) rotateY(5deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.summary-box:hover {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.summary-box p {
+    font-size: 15px;
+}
+
+.summary-box h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.item-details {
+    font-size: 13px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+hr {
+    margin: 15px 0;
+    border: 0.5px solid rgba(255, 255, 255, 0.6);
+}
+
+
+.expiry-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .expiry-container select {
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .expiry-container select:hover,
+  .expiry-container select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
+    background-color: #f8f9fa;
+  }
+  
+  .expiry-container select option {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+
+/* 🌟 Mobile-Friendly Responsive Design */
+@media (max-width: 768px) {
+    .payment-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        height: auto;
+        gap: 20px;
+    }
+
+    .payment-box {
+        width: 100%;
+        max-width: 380px;
+        padding: 20px;
+    }
+
+    .summary-box {
+        width: 100%;
+        max-width: 380px;
+        padding: 25px;
+        transform: none;
+    }
+
+    .card-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-details div {
+        width: 100%;
+    }
+
+    .discount-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .discount-box input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .discount-box button {
+        width: 100%;
+    }
+
+    .pay-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-box h2 {
+        font-size: 20px;
+    }
+
+    .summary-box h1 {
+        font-size: 24px;
+    }
+
+    .summary-item {
+        font-size: 14px;
+    }
+
+    .pay-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,233 @@
+/* General Reset */
+•⁠  ⁠{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  color: white;}
+
+/* Header Styling */
+.header {
+  background-color: #DCAE4A;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  width: 110px;
+  height: 110px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-menu a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.user-controls {
+  display: flex;
+}
+
+.user-icon, .cart-icon {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.user-icon {
+  color: #000000;
+  font-size: 35px;
+  position: relative;
+}
+.cart-icon {
+  color: black; 
+  font-size: 30px;
+}
+
+
+
+
+.checkout-container {
+  width: 100%;
+  max-width: 850px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  
+  /* Centering the container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 160px); /* Adjusting for header and footer */
+  margin: auto;
+}
+
+
+
+/* Checkout Title */
+.checkout-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Form Layout */
+.checkout-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Sections */
+.billing-details,
+.order-details {
+  width: 50%;
+  text-align: left;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+/* Form Elements */
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin: 10px 0 5px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+/* Submit Button */
+.next-button {
+  width: 100%;
+  padding: 12px;
+  background: #e4c128;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.next-button:hover {
+  background: #e9e622;
+}
+
+
+.footer {
+  background-color: #B49D72;
+  color: black;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  align-items: center; 
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Removed duplicate align-items */
+}
+
+.footer-logo {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.footer h3 {
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  line-height: 2;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+.payment-icons img {
+  height: 100px;
+  margin-left: 0px;
+  margin-right: 50px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 70px; 
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
