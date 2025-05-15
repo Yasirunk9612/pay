@@ -1,39 +1,39 @@
-# .github/workflows/ci.yml
-
 name: CI/CD Pipeline
 
 on:
   push:
     branches:
       - main
-      - feature
+      - neb-1
+      - Yasirunk9612-pitch-1
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
-      # Backend setup
+      # Install and test backend
       - name: Install backend dependencies
         run: npm install
         working-directory: ./backend
 
-      - name: Backend test placeholder
-        run: echo "No backend tests yet"
-
-      # Frontend setup
-      - name: Install frontend dependencies
+      - name: Run backend tests
         run: |
-          npm install
-          npm install react-router-dom
+          echo "No backend tests implemented yet"
+          # You can add: npm test
+        working-directory: ./backend
+
+      # Install and test frontend
+      - name: Install frontend dependencies
+        run: npm ci
         working-directory: ./frontend
 
       - name: Run frontend tests
@@ -46,24 +46,24 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - name: Install frontend dependencies
-        run: npm install
+        run: npm ci
         working-directory: ./frontend
 
       - name: Build frontend
         run: npm run build
         working-directory: ./frontend
 
-      - name: Deploy backend placeholder
+      - name: Deploy backend
         run: echo "Deploy backend logic here"
 
-      - name: Deploy frontend placeholder
+      - name: Deploy frontend
         run: echo "Deploy frontend logic here"
