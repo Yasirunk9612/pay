@@ -12,7 +12,15 @@
     width: 110px;
     height: 110px;
   }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   
+
+
   .nav-menu {
     display: flex;
     flex-grow: 1;
