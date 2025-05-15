@@ -50,13 +50,18 @@ jobs:
       with:
         node-version: 16
 
-    # Build frontend for production
+        # 📦 Frontend setup
     - name: Install frontend dependencies
-      run: npm install
+      run: npm ci
       working-directory: ./frontend
 
-    -  name: Skip frontend tests
-       run: echo "Skipping tests for now"
+    - name: Check react-router-dom version
+      run: npm list react-router-dom
+      working-directory: ./frontend
+
+    - name: Skip frontend tests (optional)
+      run: echo "Temporarily skipping tests"
+
 
 
     # Example: Deploy backend (adjust for your method)
