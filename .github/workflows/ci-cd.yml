@@ -1,3 +1,5 @@
+# .github/workflows/ci.yml
+
 name: CI/CD Pipeline
 
 on:
@@ -11,30 +13,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-    # 📦 Backend setup
-    - name: Install backend dependencies
-      run: npm install
-      working-directory: ./backend
+      # Backend setup
+      - name: Install backend dependencies
+        run: npm install
+        working-directory: ./backend
 
-    - name: Backend test placeholder
-      run: echo "No backend tests yet"
+      - name: Backend test placeholder
+        run: echo "No backend tests yet"
 
-    # 📦 Frontend setup
-    - name: Install frontend dependencies
-      run: npm install
-      working-directory: ./frontend
+      # Frontend setup
+      - name: Install frontend dependencies
+        run: |
+          npm install
+          npm install react-router-dom
+        working-directory: ./frontend
 
-    - name: Run frontend tests
-      run: npm test --watchAll=false
-      working-directory: ./frontend
+      - name: Run frontend tests
+        run: npm test --watchAll=false
+        working-directory: ./frontend
 
   deploy:
     needs: build-and-test
@@ -42,32 +46,24 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-        # 📦 Frontend setup
-    - name: Install frontend dependencies
-      run: npm ci
-      working-directory: ./frontend
+      - name: Install frontend dependencies
+        run: npm install
+        working-directory: ./frontend
 
-    - name: Check react-router-dom version
-      run: npm list react-router-dom
-      working-directory: ./frontend
+      - name: Build frontend
+        run: npm run build
+        working-directory: ./frontend
 
-    - name: Skip frontend tests (optional)
-      run: echo "Temporarily skipping tests"
+      - name: Deploy backend placeholder
+        run: echo "Deploy backend logic here"
 
-
-
-    # Example: Deploy backend (adjust for your method)
-    - name: Deploy backend placeholder
-      run: echo "Deploy backend logic here"
-
-    # Example: Deploy frontend (e.g., to Netlify, Vercel, Firebase)
-    - name: Deploy frontend placeholder
-      run: echo "Deploy frontend logic here"
+      - name: Deploy frontend placeholder
+        run: echo "Deploy frontend logic here"
