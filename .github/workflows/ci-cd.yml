@@ -20,20 +20,18 @@ jobs:
         with:
           node-version: 18
 
-      # Install and test backend
+      # Backend setup
       - name: Install backend dependencies
         run: npm install
         working-directory: ./backend
 
       - name: Run backend tests
-        run: |
-          echo "No backend tests implemented yet"
-          # You can add: npm test
+        run: echo "No backend tests implemented yet"
         working-directory: ./backend
 
-      # Install and test frontend
+      # Frontend setup
       - name: Install frontend dependencies
-        run: npm ci
+        run: npm install
         working-directory: ./frontend
 
       - name: Run frontend tests
