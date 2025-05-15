@@ -8,10 +8,10 @@ const Header = () => {
       <img src={image} alt="Glanzend Arcade Logo" className="logo" />
       
       <nav className="nav-menu">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT US</a>
-        <a href="#">OUR COLLECTION</a>
-        <a href="#">CONTACT US</a>
+        <a href="https://github.com/Yasirunk9612">HOME</a>
+        <a href="https://github.com/Yasirunk9612">ABOUT US</a>
+        <a href="https://github.com/Yasirunk9612">OUR COLLECTION</a>
+        <a href="https://github.com/Yasirunk9612">CONTACT US</a>
       </nav>
       
       <div className="user-controls">
