@@ -56,7 +56,7 @@ jobs:
       working-directory: ./frontend
 
     - name: Build frontend
-      run: npm run build
+      run: npm test --watchAll=false
       working-directory: ./frontend
 
     # Example: Deploy backend (adjust for your method)
